@@ -24,7 +24,7 @@ const Gifts = {
         const giftsNames = String(allGifts.map(g => g.giftName))
         const mailOptions = {
             from: process.env.GMAIL_USER_EMAIL,
-            to: 'prattjames4@gmail.com', // change this to florian's email
+            to: 'florian@wildcodeschool.fr',
             subject: 'Santa Gimme my Gifts !', 
             text: `Hello Santa,
 There are the gifts that I need you to give me !
