@@ -9,8 +9,6 @@ const transporter = nodemailer.createTransport({
  })
 
 module.exports = {
-	secret: 'thisismysecretphrase',
   mongodbUrl: 'mongodb://santa:test@ds121088.mlab.com:21088/gifts',
-  mongoDbName: 'gifts',
   transporter
 }
