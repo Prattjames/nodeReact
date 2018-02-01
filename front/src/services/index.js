@@ -1,13 +1,15 @@
 
+const url = "https://back-yirytgzpcw.now.sh"
+
 export const getGiftsService = async () => {
-    const data = await fetch('https://back-uiqkeefrfw.now.sh/')
+    const data = await fetch(`${url}/`)
     const json = await data.json()
     console.log('service', json)
     return json
 }
 
 export const addGiftService = async (gift) => {
-    const data = await fetch('https://back-uiqkeefrfw.now.sh/', {
+    const data = await fetch(`${url}/`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -19,7 +21,7 @@ export const addGiftService = async (gift) => {
 }
 
 export const removeGiftService = async (id) => {
-    const data = await fetch(`https://back-uiqkeefrfw.now.sh/${id}`, {
+    const data = await fetch(`${url}/${id}`, {
       method: 'DELETE',
     })
     const json = await data.json()
@@ -27,7 +29,7 @@ export const removeGiftService = async (id) => {
 }
 
 export const sendGiftsService = async () => {
-    const data = await fetch('https://back-uiqkeefrfw.now.sh/notify')
+    const data = await fetch(`${url}/notify`)
     const json = await data.json()
     return json
 }
